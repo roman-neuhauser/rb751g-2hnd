@@ -1,0 +1,40 @@
+.. vim: ft=rst sts=2 sw=2 tw=77
+.. default-role:: literal
+
+#############################################################################
+                        My RouterBOARD configuration
+#############################################################################
+
+`home.rsc` is a configuration file for RouterBOARD RB751G-2HnD,
+specific to my home network.  It can be applied with::
+
+  scp home.rsc admin@ap:
+  ssh admin@ap import home.rsc verbose=yes
+
+But don't forget to change the `ssid` and `psk` variables.
+
+Presumes being applied over the default configuration.
+Factory settings include `admin` role with empty password,
+`192.168.88.1 netmask 192.168.88/24` on ethernet port 1, and
+and sshd running.
+
+From rb751U-2HnD-ug.pdf:
+
+Buttons and Jumpers
+===================
+
+* RouterOS reset jumper hole (on the bottom of case) resets
+  RouterOS software to defaults. Must short circuit the metallic
+  sides of the hole with a screwdriver and boot the device.
+  Hold screwdriver in place until RouterOS configuration
+  is cleared.
+
+* RouterBOOT reset button (RES, front panel) has two functions:
+
+  + Hold this button during boot time until LED light starts
+    flashing, release the button to reset RouterOS configuration
+    (same result as with RouterOS reset hole)
+
+  + Hold this button during boot time longer, until LED turns off,
+    then release it to make the RouterBOARD look for Netinstall
+    servers.
