@@ -41,11 +41,11 @@
     set wlan0 \
       ssid=$ssid \
       country="czech republic" \
-      nv2-security=enabled \
       disabled=no \
+      compression=yes \
       l2mtu=2290 mode=ap-bridge \
       band=2ghz-b/g/n channel-width=20/40mhz-ht-above distance=indoors \
-      ht-supported-mcs="mcs-0,mcs-1,mcs-2,mcs-3,mcs-4,mcs-5,mcs-6,mcs-7,mcs-8,mcs-9,mcs-10,mcs-11,mcs-12,mcs-13,mcs-14,mcs-15"
+      ht-supported-mcs=mcs-0,mcs-1,mcs-2,mcs-3,mcs-4,mcs-5,mcs-6,mcs-7,mcs-8,mcs-9,mcs-10,mcs-11,mcs-12,mcs-13,mcs-14,mcs-15,mcs-16,mcs-17,mcs-18,mcs-19,mcs-20,mcs-21,mcs-22,mcs-23
 
     security-profiles {
       set [find default=yes] \
